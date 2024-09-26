@@ -1,8 +1,8 @@
-# Your Name Here
+# Steele Jacobson
 # UWYO COSC 1010
 # Submission Date
-# Lab 03 
-# Lab Section: 
+# Lab 05 
+# Lab Section: 12
 # Sources, people worked with, help given to: 
 # your
 # comments
@@ -94,9 +94,18 @@ min_temps = [
 # You cannot use in-built functions like max(), min() or sort the lists
 # The use of len() is fine
 # You can do this in two individual loops, or a single loop if you wish 
+fax = 0
+for maxi in max_temps:
+    if maxi > fax: 
+        fax = maxi
 
-print(f"Max temp = {max_temp}")
-print(f"Min temp = {min_temp}")
+fin = 0
+for mini in min_temps:
+    if mini < fin:
+        fin = mini
+
+print(f"Max temp = {fax}")
+print(f"Min temp = {mini}")
 
 # Given the below list 
 numbers = [-61, -76, 94, 21, 97, -4, 21, 56, -26, 9, 100, 56, -7, -32, 60, -68, -25, 3, -10, -83, 63, 0, 13, -99, 87, -46, -88, -71, 4, -99, -15, -12, 72, -1, -20, -90, 32, -36, -59, 83, 78, 52, 43, 55, 12, 16, -37, -5, -98, -53]
@@ -104,11 +113,34 @@ numbers = [-61, -76, 94, 21, 97, -4, 21, 56, -26, 9, 100, 56, -7, -32, 60, -68, 
 # You should print the number and the result within an f-string 
 # Example output: 83 is positive
 
-print(f'There are {pos_count} positive numbers')
-print(f'There are {neg_count} negative numbers')
-print(f"Zero occurred {zero_count} time(s)")
+sem = 0
+sim = 0
+x = 0
+y = 0
+z = 0
+
+for number in numbers:
+    if number > 0:
+        x = x + 1
+        sem = sem + number
+
+y = 0
+for number in numbers:
+    if number < 0:
+        y = y + 1
+        sim = sim + number
+
+for number in numbers:
+    if number == 0:
+        z = z + 1
+
+        
+
+print(f'There are {x} positive numbers')
+print(f'There are {y} negative numbers')
+print(f"Zero occurred {z} time(s)")
 # Given the same numbers list, give the sum of all positive numbers, and the sum of all negative numbers
 # This should be done within a single loop
 
-print(f"Sum of positive numbers {pos_sum}")
-print(f"Sum of negative numbers {neg_sum}")
+print(f"Sum of positive numbers {sem}")
+print(f"Sum of negative numbers {sim}")
